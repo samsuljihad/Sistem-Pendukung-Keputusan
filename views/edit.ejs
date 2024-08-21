@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/edit.css">
+  <title>Edit Alternative</title>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="sidebar-menu">
+      <ion-icon name="desktop-outline"></ion-icon>
+      <h2>Dashboard</h2>
+    </div>
+    <div class="icon-menu">
+      <ion-icon name="person-circle-outline" class="alternatif"></ion-icon>
+      <a href="/dashboard
+      
+      ">Data Alternatif</a>
+    </div>
+    <div class="icon-menu">
+      <ion-icon name="server-outline" class="kriteria"></ion-icon>
+      <a href="/kriteria">Data Kriteria</a>
+    </div>
+    <div class="icon-menu">
+      <ion-icon name="podium-outline" class="penilaian"></ion-icon>
+      <a href="/penilaian">Data Penilaian</a>
+    </div>
+  </div>
+  <div class="main-content">
+    <div class="judul">
+      <h1>Selamat Datang admin || <span style="color: #DD2F6E;">SMP NW KALIJAGA</span></h1>
+      <div class="search-bar" style="position: relative;">
+        <input type="text" placeholder="Cari..." style="padding-left: 50px;">
+        <ion-icon name="search-outline" style="width: 40px; height: 30px; position: absolute; left: 10px; top: 5px;"></ion-icon>
+      </div>
+    </div>
+    <div class="edit-container">
+      <h2>Edit Alternatif</h2>
+      <form action="/edit/<%= alternative.id %>" method="post">
+        <label for="name">Nisn:</label>
+        <input type="text" id="nisn" name="nisn" value="<%= alternative.nisn %>" required>
+        
+        <label for="name">Nama:</label>
+        <input type="text" id="nama" name="nama" value="<%= alternative.nama %>" required>
+  
+        <label for="name">Kelas:</label>
+        <input type="text" id="kelas" name="kelas" value="<%= alternative.kelas %>" required>
+        <button type="submit">Simpan Perubahan</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

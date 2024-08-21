@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* variable css */
+:root{
+    --primary: #DD2F6E;
+    --nav: #f0f0f0;
+    --hitam: #4A4A4A;
+    --putih: #fff;
+    --biru:#3498DB;
+    --icon:#DBF762;
+}
+
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--nav);
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 250px;
+    background-color: var(--primary);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.sidebar-menu{
+    display:flex;
+}
+.sidebar-menu ion-icon{
+    width:30px;
+    height:30px;
+    margin-left:20px;
+    margin-right:10px;
+}
+.sidebar h2 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sidebar .icon-menu {
+    display:flex;
+    align-items:center;
+    margin: 15px;
+    height:50px;
+    background-color: var(--putih);
+    border-radius: 5px;
+    text-align: center;
+}
+.sidebar .icon-menu ion-icon{
+    width:30px;
+    height:30px;
+    color:var(--hitam);
+    margin-right:10px;
+    margin-left:20px;
+}
+.sidebar .icon-menu a{
+    color: var(--hitam);
+    text-decoration: none;
+    margin-top:40px;
+    height:100%;
+    align-items:center;
+}
+
+.sidebar .icon-menu:hover {
+    background-color: var(--nav);
+}
+
+/* Main content styles */
+.main-content {
+    flex-grow: 1;
+}
+
+.main-content .judul{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    background: var(--putih);
+    padding-top: 15px;
+    padding-left: 50px;
+    margin-bottom:50px;
+}
+.main-content .judul .search-bar{
+    margin-right:50px;
+}
+.main-content .judul .search-bar input{
+    height:40px;
+    border-radius:20px;
+}
+.main-content a.button {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #3498DB;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.main-content a.button:hover {
+    background-color: var(--nav);
+}
+.main-content .regist{
+    margin-top:800px;
+    margin-left:50px;
+    padding:10px;
+    background-color:var(--primary);
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    border-radius:10px;
+}
+.regist-2{
+    padding:10px;
+    background-color:var(--primary);
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    border-radius:10px;
+}
+.data{
+    width:90%;
+    margin-top:20px;
+    padding-top:10px;
+    background:var(--putih);
+    margin-left:50px;
+}
+.data h1{
+    margin-bottom:20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: var(--primary);
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.edit-button, .delete-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.edit-button {
+    background-color: #1ABC9C;
+    margin-right: 5px;
+}
+
+.edit-button:hover {
+    background-color: #16A085;
+}
+
+.delete-button {
+    background-color: #E74C3C;
+}
+
+.delete-button:hover {
+    background-color: #C0392B;
+}
+
+.delete-form {
+    display: inline-block;
+    margin: 0;
+}

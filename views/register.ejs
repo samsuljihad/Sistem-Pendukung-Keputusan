@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/register.css">
+  <title>Pendaftaran Alternatif</title>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="sidebar-menu">
+      <ion-icon name="desktop-outline"></ion-icon>
+      <h2>Dashboard</h2>
+    </div>
+    <div class="icon-menu">
+      <ion-icon name="person-circle-outline" class="alternatif"></ion-icon>
+      <a href="/dashboard
+      
+      ">Data Alternatif</a>
+    </div>
+    <div class="icon-menu">
+      <ion-icon name="server-outline" class="kriteria"></ion-icon>
+      <a href="/kriteria">Data Kriteria</a>
+    </div>
+    <div class="icon-menu">
+      <ion-icon name="podium-outline" class="penilaian"></ion-icon>
+      <a href="/penilaian">Data Penilaian</a>
+    </div>
+  </div>
+  <div class="main-content">
+    <div class="judul">
+      <h1>Selamat Datang admin || <span style="color: #DD2F6E;">SMP NW KALIJAGA</span></h1>
+      <div class="search-bar" style="position: relative;">
+        <input type="text" placeholder="Cari..." style="padding-left: 50px;">
+        <ion-icon name="search-outline" style="width: 40px; height: 30px; position: absolute; left: 10px; top: 5px;"></ion-icon>
+      </div>
+    </div>
+    <div class="register-container">
+      <h2>Pendaftaran Alternatif</h2>
+      <form action="/register" method="post">
+          <input type="text" name="nisn" placeholder="Masukkan Nisn" required>
+          <input type="text" name="nama" placeholder="Nama Alternatif" required>
+          <input type="text" name="kelas" placeholder="Masukkan Kelas" required>
+          <button type="submit">Daftar</button>
+      </form>
+    </div>
+  </div>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

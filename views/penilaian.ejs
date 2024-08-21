@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/penilaian.css">
+  <title>Penilaian</title>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="sidebar-menu">
+      <ion-icon name="desktop-outline"></ion-icon>
+      <h2>Dashboard</h2>
+    </div>
+    <div class="icon-menu">
+      <ion-icon name="person-circle-outline" class="alternatif"></ion-icon>
+      <a href="/dashboard">Data Alternatif</a>
+    </div>
+    <div class="icon-menu">
+      <ion-icon name="server-outline" class="kriteria"></ion-icon>
+      <a href="/kriteria">Data Kriteria</a>
+    </div>
+    <div class="icon-menu">
+      <ion-icon name="podium-outline" class="penilaian"></ion-icon>
+      <a href="/penilaian">Data Penilaian</a>
+    </div>
+  </div>
+  <div class="main-content">
+    <div class="judul">
+      <h1>Selamat Datang admin || <span style="color: #DD2F6E;">SMP NW KALIJAGA</span></h1>
+      <div class="search-bar" style="position: relative;">
+        <input type="text" placeholder="Cari..." style="padding-left: 50px;">
+        <ion-icon name="search-outline" style="width: 40px; height: 30px; position: absolute; left: 10px; top: 5px;"></ion-icon>
+      </div>
+    </div>
+    <a href="/hasil" class="regist">Tampilkan Rangking</a>
+    <div class="data">
+      <h1>Daftar Penilaian</h1>
+      <a href="/penilaian/add" class="regist-2">Tambah</a>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>NISN</th>
+            <th>Nama</th>
+            <th>Kelas</th>
+            <th>Jarak dari rumah ke sekolah</th>
+            <th>Jumlah Orang Tua</th>
+            <th>Penghasilan Orang Tua</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% penilaian.forEach(item => { %>
+            <tr>
+              <td><%= item.id %></td>
+              <td><%= item.nisn %></td>
+              <td><%= item.nama %></td>
+              <td><%= item.kelas %></td>
+              <td><%= item.jarak_rumah_sekolah %></td>
+              <td><%= item.jumlah_orang_tua %></td>
+              <td><%= item.penghasilan_orang_tua %></td>
+              <td>
+                <form action="/penilaian/delete/<%= item.id %>" method="POST" class="delete-form">
+                  <button type="submit" class="delete-button">Hapus</button>
+                </form>
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- <div id="scoreTable">
+    <% if (typeof penilaian !== 'undefined' && penilaian.length > 0) { %>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>NISN</th>
+            <th>Nama</th>
+            <th>Kelas</th>
+            <th>Prestasi</th>
+            <th>Jumlah Saudara</th>
+            <th>Penghasilan Orang Tua</th>
+            <th>Total Nilai</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% penilaian.forEach(item => { %>
+            <tr>
+              <td><%= item.id %></td>
+              <td><%= item.nisn %></td>
+              <td><%= item.nama %></td>
+              <td><%= item.kelas %></td>
+              <td><%= item.prestasi %></td>
+              <td><%= item.jumlah_saudara %></td>
+              <td><%= item.penghasilan_orang_tua %></td>
+              <td><%= item.score %></td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    <% } %>
+  </div>
+  <script>
+    document.querySelector('form[action="/penilaian/calculate"]').addEventListener('submit', function() {
+      document.getElementById('scoreTable').style.display = 'block';
+    });
+  </script> -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

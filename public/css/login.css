@@ -1,0 +1,134 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* variable css */
+:root{
+    --primary: #DD2F6E;
+    --nav: #f0f0f0;
+    --hitam: #4A4A4A;
+    --putih: #fff;
+    --icon:#DBF762;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/* main */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--nav);
+    padding-top: -60px;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    height: 600px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left, .right {
+    padding: 40px;
+    width: 50%;
+}
+
+.left {
+    background-color: var(--primary);
+    color: var(--putih);
+    text-align: center;
+}
+
+.left img {
+    margin-top: 50px;
+    width: 304px;
+    padding-top:7px;
+    background-color:var(--putih);
+    margin-bottom: 30px;
+}
+.left h1{
+    color: var(--putih);
+    width: 430px;
+    text-align:center;
+    margin-left: 50px;
+}
+.left p{
+    color: var(--putih);
+    width: 430px;
+    text-align:center;
+    margin-left: 50px;
+}
+.left span{
+    font-weight:bold;
+}
+.left .icon{
+    margin-top:80px;
+}
+.icon ion-icon{
+    width:30px;
+    height:30px;
+    margin-right:10px;
+    margin-bottom:20px;
+}
+.right {
+    background-color: var(--putih);
+    text-align: center;
+}
+
+.right form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px
+}
+
+.right label {
+    align-self: flex-start;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.right input {
+    width: 500px;
+    height: 30px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.right button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: var(--primary);
+    color: var(--putih);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.right button:hover {
+    background-color: #555;
+}
+
+.right a {
+    display: block;
+    margin-top: 20px;
+    color: #333;
+    text-decoration: none;
+}
+.right a span{
+    color: var(--primary);
+}
+
+.right a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kriteria</title>
+  <link rel="stylesheet" href="/css/kriteria.css">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="sidebar-menu">
+      <ion-icon name="desktop-outline"></ion-icon>
+      <h2>Dashboard</h2>
+    </div>
+    <div class="icon-menu">
+      <ion-icon name="person-circle-outline" class="alternatif"></ion-icon>
+      <a href="/dashboard">Data Alternatif</a>
+    </div>
+    <div class="icon-menu">
+      <ion-icon name="server-outline" class="kriteria"></ion-icon>
+      <a href="/kriteria">Data Kriteria</a>
+    </div>
+    <div class="icon-menu">
+      <ion-icon name="podium-outline" class="penilaian"></ion-icon>
+      <a href="/penilaian">Data Penilaian</a>
+    </div>
+  </div>
+  <div class="main-content">
+    <div class="judul">
+      <h1>Selamat Datang admin || <span style="color: #DD2F6E;">SMP NW KALIJAGA</span></h1>
+      <div class="search-bar" style="position: relative;">
+        <input type="text" placeholder="Cari..." style="padding-left: 50px;">
+        <ion-icon name="search-outline" style="width: 40px; height: 30px; position: absolute; left: 10px; top: 5px;"></ion-icon>
+      </div>
+    </div>
+    <a href="/kriteria/add" class="regist">Tambah kriteria</a>
+    <div class="data">
+      <h2>Daftar Kriteria</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nama Kriteria</th>
+            <th>Bobot</th>
+            <th>Type Kriteria</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% kriteria.forEach(function(kriteria) { %>
+            <tr>
+              <td><%= kriteria.id %></td>
+              <td><%= kriteria.nama_kriteria %></td>
+              <td><%= kriteria.bobot %></td>
+              <td><%= kriteria.type_kriteria %></td>
+              <td>
+                <a href="/kriteria/edit/<%= kriteria.id %>" class="edit-button">Edit</a>
+                <form action="/kriteria/delete/<%= kriteria.id %>" method="post" class="delete-form">
+                  <button type="submit" class="delete-button">Hapus</button>
+                </form>
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
